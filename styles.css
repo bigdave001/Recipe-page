@@ -1,0 +1,122 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+body {
+  background-color: var(--stone-100);
+  color: var(--stone-900);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+
+h2, h3 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  color: #7d3c1f;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.omelette-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.container {
+  text-align: left;
+  padding: 30px;
+  background-color: white;
+  width: 630px;
+  border-radius: 17px;
+}
+
+.preparation-time {
+  padding: 20px;
+  background-color: #fdf3f3;
+  border-radius: 17px;
+}
+
+.preparation-time h3 {
+  color: #7d1a3a;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+    
+  
+}
+ul li {
+    margin-bottom: 14px; /* Adjust as needed */
+}
+
+
+
+ul li::before { 
+  content: "•";  
+  color: #7d1a3a; 
+  font-weight: bold; 
+  margin-right: 8px;
+    
+
+    
+}
+ol {
+    list-style: none; /* Remove default numbering */
+    counter-reset: list-counter;
+    padding-left: 0;
+}
+
+ol li {
+    counter-increment: list-counter;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust this value to increase/decrease spacing */
+    margin-bottom: 13px;
+}
+
+ol li::before {
+    content: counter(list-counter) ".";
+    font-weight: bold;
+    color: #a85d4b;
+    font-size: 1.2em;
+}
+.hr {
+    margin: 20px;
+    border: none;
+    height: 1px;
+    background-color:#a85d4b;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+.table td:nth-child(2) {
+    color: #7d3c1f; /* Changes text color to green */
+    font-weight: bold; /* Optional: Makes text bold */
+}
+
+tr:not(:last-child) td {
+    border-bottom: 1px solid #a85d4b;
+}
+td {
+    padding: 10px 0; 
+    
+}
