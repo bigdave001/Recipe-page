@@ -8,6 +8,19 @@
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
 }
+/* Mobile-first approach */
+.container {
+  width: 90%;
+  max-width: 375px;
+  margin: auto;
+}
+
+/* Adjust for desktop */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 800px;
+  }
+}
 
 body {
   background-color: var(--stone-100);
@@ -74,7 +87,7 @@ ul li {
   margin-bottom: 14px;
   display: flex; /* Aligns bullet and text properly */
   align-items: stretch;
-  gap: 13px; /* Adjust spacing between bullet and text */
+  gap: 10px; /* Adjust spacing between bullet and text */
 }
 
 ul li::before { 
@@ -99,7 +112,7 @@ ol li {
   counter-increment: list-counter;
   display: flex;
   align-items: flex-start; /* Align items at the top */
-  gap: 0px; /* Adjust spacing between number and text */
+  gap: 1px; /* Adjust spacing between number and text */
   margin-bottom: 13px;
 }
 
@@ -107,7 +120,7 @@ ol li::before {
   content: counter(list-counter) "."; 
   font-weight: bold;
   color: #a85d4b;
-  font-size: 1.1em;
+  font-size: 1em;
   min-width: 25px; /* Ensures all numbers align properly */
 }
 
