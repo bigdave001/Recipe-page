@@ -1,4 +1,3 @@
-/* Root Variables for Colors */
 :root {
   --white: hsl(0, 0%, 100%);
   --stone-100: hsl(30, 54%, 90%);
@@ -10,49 +9,15 @@
   --rose-50: hsl(330, 100%, 98%);
 }
 
-@media (max-width: 375px) {
-  body {
-    font-size: 14px;
-    padding: 20px;
-  }
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 15px;
-  }
-}
-
-/* Global Styles */
 body {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
   background-color: var(--stone-100);
   color: var(--stone-900);
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
   padding: 60px;
-}
-
-/* Main Content Container */
-.container {
-  width: 90%;
-  max-width: 600px;
-  background-color: var(--white);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Image Styling */
-.omelette-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
 }
 
 h2, h3 {
@@ -61,45 +26,44 @@ h2, h3 {
   color: #7d3c1f;
 }
 
-/* Mobile (375px) Responsive */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body {
     font-size: 14px;
-    padding: 20px;
-  }
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 0;
   }
 }
 
-/* Desktop (1440px) Responsive */
-@media (min-width: 1440px) {
-  body {
-    font-size: 18px;
-    padding: 80px;
-  }
-  .container {
-    max-width: 800px;
-    padding: 40px;
-  }
+.omelette-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Preparation Time Section */
+.container {
+  text-align: left;
+  padding: 30px;
+  background-color: white;
+  width: 630px;
+  border-radius: 17px;
+}
+
 .preparation-time {
-  padding: 10px;
+  padding:10px;
   background-color: #fdf3f3;
   border-radius: 17px;
-  margin-right: 1px;
+    
+    margin-right: 1px; /* Adjust space between bold text and the following content */
+  
+}
+
+}
+{
+    tab-size: 100px;
 }
 
 .preparation-time h3 {
   color: #7d1a3a;
 }
 
-/* Unordered List Styles */
 ul {
   list-style: none;
   padding-left: 0;
@@ -108,9 +72,9 @@ ul {
 
 ul li {
   margin-bottom: 14px;
-  display: flex;
+  display: flex; /* Aligns bullet and text properly */
   align-items: stretch;
-  gap: 13px;
+  gap: 13px; /* Adjust spacing between bullet and text */
 }
 
 ul li::before { 
@@ -120,15 +84,13 @@ ul li::before {
   font-size: 1.2em;
 }
 
-/* Instructions */
 .instructions {
   margin-bottom: 34px;
   margin-top: 34px;
 }
 
-/* Ordered List Styles */
 ol {
-  list-style: none;
+  list-style: none; /* Remove default numbering */
   counter-reset: list-counter;
   padding-left: 0;
 }
@@ -136,7 +98,8 @@ ol {
 ol li {
   counter-increment: list-counter;
   display: flex;
-  gap: 0px;
+  align-items: flex-start; /* Align items at the top */
+  gap: 0px; /* Adjust spacing between number and text */
   margin-bottom: 13px;
 }
 
@@ -145,17 +108,15 @@ ol li::before {
   font-weight: bold;
   color: #a85d4b;
   font-size: 1.1em;
-  min-width: 25px;
+  min-width: 25px; /* Ensures all numbers align properly */
 }
 
-/* Horizontal Rule Divider */
-.divider {
+.hr {
   margin: 20px 0 10px 0;
   border: none;
   border-top: 1px solid #a85d4b;
 }
 
-/* Table Styling */
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -169,13 +130,6 @@ ol li::before {
 tr:not(:last-child) td {
   border-bottom: 1px solid #a85d4b;
 }
-
-td {
-  padding: 18px 0;
-  padding-left: 24px;
-}
-
-
 
 td {
   padding: 18px 0;
