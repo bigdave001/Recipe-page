@@ -9,6 +9,21 @@
   --rose-800: hsl(332, 51%, 32%);
   --rose-50: hsl(330, 100%, 98%);
 }
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+    padding: 20px;
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 0;
+  }
+    @media (max-width: 400px) { ... }
+
+}
+
 
 /* Global Styles */
 body {
@@ -161,6 +176,7 @@ td {
   padding: 18px 0;
   padding-left: 24px;
 }
+
 
 td {
   padding: 18px 0;
