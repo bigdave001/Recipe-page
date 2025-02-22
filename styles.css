@@ -49,7 +49,7 @@ body {
 
   .container {
     max-width: 100%; /* Full width on mobile */
-    border-radius: 0; /* Remove border radius for full-width mobile view */
+    border-radius: 17; /* Remove border radius for full-width mobile view */
     box-shadow: none; /* Remove shadow for full-width mobile view */
   }
 }
@@ -58,6 +58,8 @@ h2, h3 {
   font-family: "Young Serif", serif;
   font-weight: 400;
   color: var(--brown-800);
+  padding-right: 0px;
+  text-align: left;
 }
 
 .omelette-image {
@@ -67,27 +69,34 @@ h2, h3 {
 }
 
 .preparation-time {
-  padding: 10px;
+  padding-left: 0;
   background-color: var(--rose-50);
   border-radius: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-top: 7px;
+}
+
+h3 {
+  padding-left: 30px;
 }
 
 .preparation-time h3 {
   color: var(--rose-800);
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-  padding-bottom: 10px;
+.prep-time {
+}
+
+.ul {
+  padding-left: 8px;
+  padding-bottom: 8px;
 }
 
 ul li {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 ul li::before { 
@@ -102,26 +111,27 @@ ul li::before {
   margin-top: 34px;
 }
 
+/* Fixed typo - changed "ool" to "ol" */
 ol {
   list-style: none;
   counter-reset: list-counter;
-  padding-left: 0;
+  padding-left: 8px;
 }
 
 ol li {
   counter-increment: list-counter;
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
   margin-bottom: 13px;
+  text-align: left;
+  padding-left: 35px; /* Adjusted spacing between number and text */
+  position: relative; /* Allows positioning of the counter */
 }
 
 ol li::before {
   content: counter(list-counter) "."; 
   font-weight: bold;
   color: var(--brown-800);
-  font-size: 1em;
-  min-width: 25px;
+  position: absolute;
+  left: 0;
 }
 
 .hr {
@@ -135,6 +145,10 @@ ol li::before {
   border-collapse: collapse;
 }
 
+.table-p {
+  padding-left: 10px;
+}
+
 .table td:nth-child(2) {
   color: var(--brown-800);
   font-weight: bold;
@@ -145,6 +159,6 @@ tr:not(:last-child) td {
 }
 
 td {
-  padding: 18px 0;
+  padding: 24px 0;
   padding-left: 24px;
 }
