@@ -36,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh; /* Ensure body takes full viewport height */
   padding: 60px; /* Padding for desktop */
 }
 
@@ -47,6 +48,7 @@ body {
   }
 
   .container {
+    max-width: 100%; /* Full width on mobile */
     border-radius: 0; /* Remove border radius for full-width mobile view */
     box-shadow: none; /* Remove shadow for full-width mobile view */
   }
