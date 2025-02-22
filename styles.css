@@ -1,3 +1,4 @@
+/* Root Variables for Colors */
 :root {
   --white: hsl(0, 0%, 100%);
   --stone-100: hsl(30, 54%, 90%);
@@ -9,15 +10,36 @@
   --rose-50: hsl(330, 100%, 98%);
 }
 
+/* Global Styles */
 body {
-  background-color: var(--stone-100);
-  color: var(--stone-900);
   font-family: "Outfit", sans-serif;
   font-size: 16px;
+  background-color: var(--stone-100);
+  color: var(--stone-900);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
   padding: 60px;
+}
+
+/* Main Content Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.omelette-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 h2, h3 {
@@ -26,97 +48,97 @@ h2, h3 {
   color: #7d3c1f;
 }
 
+/* Mobile (375px) Responsive */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
   }
 }
 
-.omelette-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.container {
-  text-align: left;
-  padding: 30px;
-  background-color: white;
-  width: 630px;
-  border-radius: 17px;
-}
-
+/* Preparation Time Section */
 .preparation-time {
-  padding: 20px;
+  padding: 10px;
   background-color: #fdf3f3;
   border-radius: 17px;
+  margin-right: 1px;
 }
 
 .preparation-time h3 {
   color: #7d1a3a;
 }
 
+/* Unordered List Styles */
 ul {
   list-style: none;
-  padding-left: 20px;
-    
-  
+  padding-left: 0;
+  padding-bottom: 10px;
 }
+
 ul li {
-    margin-bottom: 14px; /* Adjust as needed */
+  margin-bottom: 14px;
+  display: flex;
+  align-items: stretch;
+  gap: 13px;
 }
-
-
 
 ul li::before { 
   content: "•";  
   color: #7d1a3a; 
   font-weight: bold; 
-  margin-right: 8px;
-    
-
-    
+  font-size: 1.2em;
 }
+
+/* Instructions */
+.instructions {
+  margin-bottom: 34px;
+  margin-top: 34px;
+}
+
+/* Ordered List Styles */
 ol {
-    list-style: none; /* Remove default numbering */
-    counter-reset: list-counter;
-    padding-left: 0;
+  list-style: none;
+  counter-reset: list-counter;
+  padding-left: 0;
 }
 
 ol li {
-    counter-increment: list-counter;
-    display: flex;
-    align-items: center;
-    gap: 20px; /* Adjust this value to increase/decrease spacing */
-    margin-bottom: 13px;
+  counter-increment: list-counter;
+  display: flex;
+  gap: 0px;
+  margin-bottom: 13px;
 }
 
 ol li::before {
-    content: counter(list-counter) ".";
-    font-weight: bold;
-    color: #a85d4b;
-    font-size: 1.2em;
+  content: counter(list-counter) "."; 
+  font-weight: bold;
+  color: #a85d4b;
+  font-size: 1.1em;
+  min-width: 25px;
 }
-.hr {
-    margin: 20px;
-    border: none;
-    height: 1px;
-    background-color:#a85d4b;
+
+/* Horizontal Rule Divider */
+.divider {
+  margin: 20px 0 10px 0;
+  border: none;
+  border-top: 1px solid #a85d4b;
 }
+
+/* Table Styling */
 .table {
-    width: 100%;
-    border-collapse: collapse; 
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .table td:nth-child(2) {
-    color: #7d3c1f; /* Changes text color to green */
-    font-weight: bold; /* Optional: Makes text bold */
+  color: #7d3c1f;
+  font-weight: bold;
 }
 
 tr:not(:last-child) td {
-    border-bottom: 1px solid #a85d4b;
+  border-bottom: 1px solid #a85d4b;
 }
+
 td {
-    padding: 18px 0; 
-    
+  padding: 18px 0;
+  padding-left: 24px;
 }
